@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/seL4/" name="seL4"/>
+  <remote fetch="https://github.com/sel4-us/" name="sel4us"/>
+  <default remote="seL4" revision="master"/>
+  <project name="musllibc.git" path="projects/musllibc" revision="d5d5d04e4f99f9900269350e5bb0f9f9b0a27ca9" upstream="sel4">
+    <linkfile dest="libs/libmuslc" src="."/>
+  </project>
+  <project name="seL4.git" path="kernel" revision="7ce75bb2ae10e929fe50f9e0b263505d06f81566" upstream="master"/>
+  <project name="seL4_libs.git" path="projects/seL4_libs" revision="239f6dc6364c3bfd40e72bf3efdc96360d86a744" upstream="master">
+    <linkfile dest="libs/libsel4allocman" src="libsel4allocman"/>
+    <linkfile dest="libs/libsel4debug" src="libsel4debug"/>
+    <linkfile dest="libs/libsel4muslcsys" src="libsel4muslcsys"/>
+    <linkfile dest="libs/libsel4platsupport" src="libsel4platsupport"/>
+    <linkfile dest="libs/libsel4serialserver" src="libsel4serialserver"/>
+    <linkfile dest="libs/libsel4simple" src="libsel4simple"/>
+    <linkfile dest="libs/libsel4simple-default" src="libsel4simple-default"/>
+    <linkfile dest="libs/libsel4simple-stable" src="libsel4simple-stable"/>
+    <linkfile dest="libs/libsel4test" src="libsel4test"/>
+    <linkfile dest="libs/libsel4utils" src="libsel4utils"/>
+    <linkfile dest="libs/libsel4vka" src="libsel4vka"/>
+    <linkfile dest="libs/libsel4vspace" src="libsel4vspace"/>
+    <linkfile dest="libs/libsel4sync" src="libsel4sync"/>
+  </project>
+  <project name="seL4_tools.git" path="projects/tools" revision="af48b52d5a03a3a7a62c64fe89eb5f30d5234144" upstream="master">
+    <linkfile dest="tools/common" src="common-tool"/>
+    <linkfile dest="tools/kbuild" src="kbuild-tool"/>
+    <linkfile dest="tools/elfloader" src="elfloader-tool"/>
+    <linkfile dest="tools/cmake-tool" src="cmake-tool"/>
+    <linkfile dest="CMakeLists.txt" src="cmake-tool/default-CMakeLists.txt"/>
+    <linkfile dest="init-build.sh" src="cmake-tool/init-build.sh"/>
+  </project>
+  
+  <!--project name="sel4test.git" path="projects/sel4test" revision="08bb70bd5c764d0176c06b1032f81dcf0fe976c7" upstream="master">
+    <linkfile dest="Makefile" src="Makefile"/>
+    <linkfile dest="Kbuild" src="Kbuild"/>
+    <linkfile dest="Kconfig" src="Kconfig"/>
+    <linkfile dest="configs" src="master-configs"/>
+    <linkfile dest="apps" src="apps"/>
+    <linkfile dest="libs/libsel4" src="../../kernel/libsel4"/>
+    <linkfile dest="libs/libsel4testsupport" src="libsel4testsupport"/>
+  </project-->
+  <project remote="sel4us" name="coe_apps.git" path="projects/coe/">
+    <linkfile dest="README.md" src="README.md"/>
+    <linkfile dest="Makefile" src="build-config/Makefile-sel4"/>
+    <linkfile dest="Kbuild" src="build-config/Kbuild-sel4"/>
+    <linkfile dest="Kconfig" src="build-config/Kconfig-sel4"/>
+    <linkfile dest="configs" src="master-configs"/>
+    <linkfile dest="apps/root_task" src="apps/root_task"/>
+    <linkfile dest="apps/child_example" src="apps/child_example"/>
+    <linkfile dest="apps/dummy" src="apps/dummy"/>
+    <linkfile dest="apps/test_proc" src="apps/test_proc"/>
+    <linkfile dest="libs/libprocess" src="libs/libprocess"/>
+    <linkfile dest="libs/libthread" src="libs/libthread"/>
+    <linkfile dest="libs/libinit" src="libs/libinit"/>
+    <linkfile dest="libs/libmmap" src="libs/libmmap"/>
+    <linkfile dest="libs/liblockwrapper" src="libs/liblockwrapper"/>
+</project>
+  <project name="util_libs.git" path="projects/util_libs" revision="88119c8c2a52082d5c809e828fda45162245e7fb" upstream="master">
+    <linkfile dest="libs/libcpio" src="libcpio"/>
+    <linkfile dest="libs/libelf" src="libelf"/>
+    <linkfile dest="libs/libplatsupport" src="libplatsupport"/>
+    <linkfile dest="libs/libutils" src="libutils"/>
+    <linkfile dest="libs/libethdrivers" src="libethdrivers"/>
+    <linkfile dest="libs/libpci" src="libpci"/>
+    <linkfile dest="libs/libpicotcp" src="libpicotcp"/>
+    <linkfile dest="libs/liblwip" src="liblwip"/>
+  </project>
+</manifest>
