@@ -36,7 +36,7 @@
   
   <project name="sel4test.git" path="projects/sel4test" revision="08bb70bd5c764d0176c06b1032f81dcf0fe976c7" upstream="master">
     <linkfile dest="libs/libsel4testsupport" src="libsel4testsupport"/>
-  </project-->
+  </project>
   <project remote="matthew-renodin" name="coe_apps.git" path="projects/coe/">
     <linkfile dest="README.md" src="README.md"/>
     <linkfile dest="Makefile" src="build-config/Makefile-sel4"/>
@@ -60,7 +60,6 @@
     <linkfile dest="libs/libutils" src="libutils"/>
     <linkfile dest="libs/libethdrivers" src="libethdrivers"/>
     <linkfile dest="libs/libpci" src="libpci"/>
-    <linkfile dest="libs/libpicotcp" src="libpicotcp"/>
-    <linkfile dest="libs/liblwip" src="liblwip"/>
+     <linkfile dest="libs/liblwip" src="liblwip"/>
   </project>
 </manifest>
