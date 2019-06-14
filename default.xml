@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://github.com/seL4/" name="seL4"/>
   <remote fetch="https://github.com/sel4-us/" name="sel4us"/>
+  <remote fetch="https://github.com/matthew-renodin/" name="matthew-renodin"/>
   <default remote="seL4" revision="master"/>
   <project name="musllibc.git" path="projects/musllibc" revision="d5d5d04e4f99f9900269350e5bb0f9f9b0a27ca9" upstream="sel4">
     <linkfile dest="libs/libmuslc" src="."/>
@@ -42,7 +43,7 @@
     <linkfile dest="libs/libsel4" src="../../kernel/libsel4"/>
     <linkfile dest="libs/libsel4testsupport" src="libsel4testsupport"/>
   </project-->
-  <project remote="sel4us" name="coe_apps.git" path="projects/coe/">
+  <project remote="matthew-renodin" name="coe_apps.git" path="projects/coe/">
     <linkfile dest="README.md" src="README.md"/>
     <linkfile dest="Makefile" src="build-config/Makefile-sel4"/>
     <linkfile dest="Kbuild" src="build-config/Kbuild-sel4"/>
